@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "issue": 7,
+  "commit": "02c8635a6bbaab1bf82c7dc8618007026a549b43",
+  "generatedAt": "2026-09-18T03:26:01.655Z",
+  "playwrightVersion": "1.61.1",
+  "batches": [
+    {
+      "file": "2026-09-18T03-01-16-659Z.json",
+      "specs": 2
+    },
+    {
+      "file": "2026-09-18T03-02-09-150Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-02-58-135Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-06-38-578Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-06-56-616Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-07-14-674Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-09-05-067Z.json",
+      "specs": 3
+    },
+    {
+      "file": "2026-09-18T03-11-03-625Z.json",
+      "specs": 4
+    },
+    {
+      "file": "2026-09-18T03-13-48-212Z.json",
+      "specs": 3
+    },
+    {
+      "file": "2026-09-18T03-15-50-733Z.json",
+      "specs": 12
+    },
+    {
+      "file": "2026-09-18T03-23-09-405Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-24-31-316Z.json",
+      "specs": 1
+    },
+    {
+      "file": "2026-09-18T03-25-12-723Z.json",
+      "specs": 1
+    }
+  ],
+  "totals": {
+    "e2e": {
+      "total": 12,
+      "pass": 1,
+      "fail": 11,
+      "notRun": 0
+    },
+    "manual": 0,
+    "scenario": 0
+  },
+  "criteria": [
+    {
+      "id": "AC-001-a",
+      "requirementId": "REQ-001",
+      "must": "An unauthenticated visitor is directed to sign in before seeing the todo list",
+      "method": "e2e",
+      "status": "pass",
+      "spec": "tests/e2e/specs/AC-001-a.spec.ts",
+      "healed": true,
+      "healAttempts": 1,
+      "flaky": false,
+      "durationMs": 13107,
+      "failure": null,
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-001-b",
+      "requirementId": "REQ-001",
+      "must": "After signing in, the user lands on the shared todo list",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-001-b.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34760,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for\" https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\" navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-001-b.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-002-a",
+      "requirementId": "REQ-002",
+      "must": "Submitting a todo with text adds it to the shared list",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-002-a.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34940,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-002-a.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-002-b",
+      "requirementId": "REQ-002",
+      "must": "A newly added todo is visible to any other signed-in user viewing the list",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-002-b.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34775,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-002-b.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-002-c",
+      "requirementId": "REQ-002",
+      "must": "Attempting to add a todo with empty text is rejected",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-002-c.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34689,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n",
+        "location": "AC-002-c.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-003-a",
+      "requirementId": "REQ-003",
+      "must": "The list view shows every todo on the shared list, regardless of who added it",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-003-a.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34723,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-003-a.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-004-a",
+      "requirementId": "REQ-004",
+      "must": "Marking a todo done updates its status and is reflected in the list",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-004-a.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 35128,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-004-a.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-004-b",
+      "requirementId": "REQ-004",
+      "must": "Marking a done todo back to not done updates its status and is reflected in the list",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-004-b.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34855,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for\" https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\" navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-004-b.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-004-c",
+      "requirementId": "REQ-004",
+      "must": "A completed todo remains visible in the list, shown as done, rather than disappearing",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-004-c.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34946,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-004-c.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-004-d",
+      "requirementId": "REQ-004",
+      "must": "A user can toggle a todo added by a different user",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-004-d.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34319,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-004-d.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-005-a",
+      "requirementId": "REQ-005",
+      "must": "Deleting a todo removes it from the shared list for every user",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-005-a.spec.ts",
+      "healed": false,
+      "healAttempts": 0,
+      "flaky": false,
+      "durationMs": 34561,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-005-a.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-15-50-733Z.json"
+    },
+    {
+      "id": "AC-005-b",
+      "requirementId": "REQ-005",
+      "must": "A user can delete a todo added by a different user",
+      "method": "e2e",
+      "status": "fail",
+      "spec": "tests/e2e/specs/AC-005-b.spec.ts",
+      "healed": true,
+      "healAttempts": 1,
+      "flaky": false,
+      "durationMs": 34705,
+      "failure": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Shared Todos' })\nExpected: visible\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 20000ms\n  - waiting for getByRole('heading', { name: 'Shared Todos' })\n    - waiting for\" https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\" navigation to finish...\n    - navigated to \"https://http-simplest-todo-development-default-5a4fe791.apps.94.72.97.95.sslip.io/\"\n",
+        "location": "AC-005-b.spec.ts:5"
+      },
+      "batch": "2026-09-18T03-25-12-723Z.json"
+    }
+  ]
+}
