@@ -25,3 +25,4 @@ dependencies:
         issuer: USER_AUTH_ISSUER
         jwks_url: USER_AUTH_JWKS_URL
         scopes: USER_AUTH_SCOPES
+        resource: USER_AUTH_RESOURCE
