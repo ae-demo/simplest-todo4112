@@ -1,0 +1,7 @@
+/node_modules
+/dist
+
+# The local git exclude carries an unanchored `core.*` (crash-dump) pattern
+# that collides with thunder-authentication's mandated src/authz/core.ts.
+# Un-ignore this one real source file explicitly.
+!/src/authz/core.ts
