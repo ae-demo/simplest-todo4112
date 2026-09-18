@@ -21,13 +21,13 @@ todo, mark any todo done or not done, and delete any todo.
 
 1. As a User, I want to sign in, so that I can access the shared todo list.
 2. As a User, I want to add a new todo with a short text description, so that
- it appears on the shared list for everyone to see.
+it appears on the shared list for everyone to see.
 3. As a User, I want to view the full list of todos, so that I know what
- needs doing.
+needs doing.
 4. As a User, I want to mark a todo as done (or back to not done), so that
- the list reflects current progress.
+the list reflects current progress.
 5. As a User, I want to delete a todo, so that the list stays free of items
- nobody needs anymore.
+nobody needs anymore.
 
 ## Product Decisions
 
@@ -39,9 +39,9 @@ no private per-user lists.
 dates, priorities, or categories.
 - Permissions: any signed-in user may add, complete/uncomplete, or delete any
 todo on the shared list — there is no ownership restriction on the shared
-list. *assumed*
+list.
 - Completed todos remain visible in the list (shown as done) rather than
-being hidden or archived. *assumed*
+being hidden or archived.
 
 ## Out of Scope
 
