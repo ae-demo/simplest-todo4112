@@ -1,0 +1,51 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "statement": "A user can sign in via SSO to access the shared todo list",
+      "stories": [1],
+      "criteria": [
+        { "id": "AC-001-a", "must": "An unauthenticated visitor is directed to sign in before seeing the todo list", "method": "e2e" },
+        { "id": "AC-001-b", "must": "After signing in, the user lands on the shared todo list", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "statement": "A signed-in user can add a new todo with a short text description to the shared list",
+      "stories": [2],
+      "criteria": [
+        { "id": "AC-002-a", "must": "Submitting a todo with text adds it to the shared list", "method": "e2e" },
+        { "id": "AC-002-b", "must": "A newly added todo is visible to any other signed-in user viewing the list", "method": "e2e" },
+        { "id": "AC-002-c", "must": "Attempting to add a todo with empty text is rejected", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "statement": "A signed-in user can view the full shared list of todos",
+      "stories": [3],
+      "criteria": [
+        { "id": "AC-003-a", "must": "The list view shows every todo on the shared list, regardless of who added it", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "statement": "A signed-in user can mark any todo as done or back to not done",
+      "stories": [4],
+      "criteria": [
+        { "id": "AC-004-a", "must": "Marking a todo done updates its status and is reflected in the list", "method": "e2e" },
+        { "id": "AC-004-b", "must": "Marking a done todo back to not done updates its status and is reflected in the list", "method": "e2e" },
+        { "id": "AC-004-c", "must": "A completed todo remains visible in the list, shown as done, rather than disappearing", "method": "e2e" },
+        { "id": "AC-004-d", "must": "A user can toggle a todo added by a different user", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-005",
+      "statement": "A signed-in user can delete any todo from the shared list",
+      "stories": [5],
+      "criteria": [
+        { "id": "AC-005-a", "must": "Deleting a todo removes it from the shared list for every user", "method": "e2e" },
+        { "id": "AC-005-b", "must": "A user can delete a todo added by a different user", "method": "e2e" }
+      ]
+    }
+  ]
+}

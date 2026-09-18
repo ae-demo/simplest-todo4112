@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "permissions": [
+    {
+      "resource": "todos",
+      "component": "todo-api",
+      "description": "Items on the single shared todo list",
+      "actions": [
+        { "handle": "read", "description": "See every todo on the shared list" },
+        { "handle": "manage", "description": "Add, complete/uncomplete, or delete any todo" }
+      ]
+    }
+  ],
+  "groups": [],
+  "roles": [
+    {
+      "name": "Collaborator",
+      "description": "The PRD's User actor: any signed-in person who views, adds, completes, and deletes items on the shared todo list.",
+      "stories": [1, 2, 3, 4, 5],
+      "grants": ["todos:read", "todos:manage"],
+      "assignTo": ["User"]
+    }
+  ],
+  "testUsers": [
+    { "username": "test-collaborator", "roles": ["Collaborator"] }
+  ]
+}

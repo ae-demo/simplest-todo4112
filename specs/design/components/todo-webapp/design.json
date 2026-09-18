@@ -1,0 +1,17 @@
+{
+  "name": "todo-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "todo-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "todo-api" },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "Single-page app for the shared todo list: sign in, view the list, add a todo, toggle done/not-done, and delete a todo. Holds no data of its own — everything is read from and written to todo-api.",
+  "stories": [1, 2, 3, 4, 5],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system", "thunder-authentication"]
+}
